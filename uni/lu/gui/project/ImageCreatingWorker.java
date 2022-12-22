@@ -43,6 +43,7 @@ public class ImageCreatingWorker extends SwingWorker<Void, Void> implements Cont
     }
 
     private Image createImage() {
+        // It should be safe to access the Swing components from the worker thread in read-only mode.
         int angle = controlPanel.getAngle();
         int distance = controlPanel.getDistance();
         int intensity = controlPanel.getIntensity();

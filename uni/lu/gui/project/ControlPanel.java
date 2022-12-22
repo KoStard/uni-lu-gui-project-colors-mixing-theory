@@ -95,6 +95,7 @@ public class ControlPanel extends JPanel {
     }
 
     public void addControlChangeListener(ControlChangeListener controlChangeListener) {
+        // This approach is not ideal, as it requires the listener to be added to all the components one by one.
         angleInput.addControlChangeListener(controlChangeListener);
         distanceInput.addControlChangeListener(controlChangeListener);
         intensityInput.addControlChangeListener(controlChangeListener);
